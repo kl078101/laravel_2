@@ -1,3 +1,7 @@
 <?php
 
-echo '我是 2 ，我在输出';
+//弹出信息提示框
+function alert($message, $type = 'success')
+{
+    session()->flash($type, $message);
+}
