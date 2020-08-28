@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
 
 @section('title')
-我是小可爱
+后台中心
 @endsection
 
 @section('content')
-我是 2
-{!! config('project.admin.state')[0] !!}
+<br>
+<?php dump(Auth::guard('admin')->user()); ?>
 @endsection
