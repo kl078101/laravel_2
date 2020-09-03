@@ -53,7 +53,7 @@ class AdminUserController extends Controller
             $adminuser->update($data);
 
         }else{
-            $data['state'] = AdminUser::NORMAL;
+            $data['state'] = setting('default_state');
             $data['password'] = Hash::make($data['password']);
 
             $adminuser->create($data);

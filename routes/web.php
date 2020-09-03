@@ -38,6 +38,12 @@ Route::prefix('admin')->group(function () {
             Route::get('remove/{adminuser}', 'AdminUserController@remove')->name('admin.adminuser.remove');
             Route::get('state/{adminuser}', 'AdminUserController@state')->name('admin.adminuser.state');
         });
+
+        //系统设置
+        Route::prefix('setting')->group(function () {
+            Route::get('/', 'SettingController@index')->name('admin.setting');
+            Route::post('/', 'SettingController@save')->name('admin.setting');
+        });
     });
 
 });
